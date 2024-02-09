@@ -1,0 +1,225 @@
+package author;
+
+public class pub {
+	public static void main(String[] args) {
+		String data = """
+어스본코리아
+Mirae N 아이세움
+Mirae N 아이세움
+김영사
+Oxford University Press
+위즈덤하우스
+겜툰
+아이휴먼
+아울북
+Scholastic
+Scholastic
+Mirae N 아이세움
+아울북
+베틀북
+Mirae N 아이세움
+다림
+대원키즈
+다산어린이
+위즈덤하우스
+Mirae N 아이세움
+사파리
+Mirae N 아이세움
+Mirae N 아이세움
+Mirae N 아이세움
+샌드박스스토리키즈
+Mirae N 아이세움
+한솔수북
+Mirae N 아이세움
+겜툰
+Scholastic
+시공주니어
+아울북
+Scholastic
+서울문화사
+겜툰
+푸른숲주니어
+아람
+이성과감성
+Mirae N 아이세움
+지양사
+다산어린이
+Mirae N 아이세움
+키즈엠
+Mirae N 아이세움
+보림
+주니어김영사
+Mirae N 아이세움
+Scholastic Singapore
+Mirae N 아이세움
+다산어린이
+다산북스
+아울북
+Mirae N 아이세움
+위즈덤하우스
+어스본코리아
+아울북
+주니어RHK
+Mirae N 아이세움
+길벗어린이
+대원키즈
+Dankkum i(단꿈아이)
+겜툰
+겜툰
+비룡소
+겜툰
+비룡소
+Mirae N 아이세움
+Sandbox Story Kids(샌드박스스토리 키즈)
+아울북
+아울북
+Scholastic
+주니어RHK
+돌핀북
+Mirae N 아이세움
+서울문화사
+주니어김영사
+겜툰
+Scholastic
+Scholastic
+겜툰
+아울북
+서울문화사
+서울문화사
+서울문화사
+다산어린이
+미래엔
+아이세움
+Mirae N 아이세움
+Mirae N 아이세움
+Red Fox
+Mirae N 아이세움
+Tornado(토네이도)
+bMirae N 아이세움
+주니어김영사
+Mirae N 아이세움
+북이십일 아울북
+사파리
+창비
+Mirae N 아이세움
+주니어김영사
+Mirae N 아이세움
+슈크림북
+Mirae N 아이세움
+주니어김영사
+서울문화사
+다산어린이
+나무옆의자
+주니어김영사
+Mirae N 아이세움
+Mirae N 아이세움
+주니어김영사
+Mirae N 아이세움
+서울문화사
+멘토르출판사
+아울북
+천개의바람
+길벗어린이
+Mirae N 아이세움
+Mirae N 아이세움
+아울북
+다산어린이
+아울북
+Old Stairs
+Old Stairs
+Mirae N 아이세움
+주니어김영사
+위즈덤하우스
+제제의숲
+위즈덤하우스
+Mirae N 아이세움
+비룡소인터내셔널
+코이북스
+책읽는곰
+다산어린이
+Mirae N 아이세움
+Mirae N 아이세움
+꿈터
+대원키즈
+슈크림북
+파란정원
+아울북
+한솔수북
+Bicycle
+북뱅크
+다산어린이
+Mirae N 아이세움
+Mirae N 아이세움
+Mirae N 아이세움
+Mirae N 아이세움
+아울북
+아울북
+푸른사상
+시공주니어
+주니어김영사
+파란정원
+아울북
+마술피리
+북뱅크
+돌핀북
+씨드북
+서울문화사
+단꿈아이
+다산어린이
+창비
+Mirae N 아이세움
+비룡소
+토토북
+Scholastic
+책내음
+다산어린이
+Mirae N 아이세움
+미래M&B
+루크하우스
+노란돼지
+북이십일 아울북
+아울북
+책내음
+다산어린이
+팩토리나인
+북이십일 아울북
+Mirae N 아이세움
+흐름출판
+대원키즈
+다산어린이
+대원키즈
+노란돼지
+슈크림북
+북이십일 아울북
+아울북
+주니어김영사
+위즈덤하우스
+Mirae N 아이세움
+북이십일 아울북
+Penguin Young Readers Group
+반달
+다산어린이
+주니어김영사
+토이트론
+아울북
+토이트론
+
+	        """;
+
+		// 줄바꿈 문자로 데이터를 분리
+		String[] lines = data.split("\\r?\\n");
+
+        // 데이터 처리
+        for (String line : lines) {
+            // INSERT 쿼리 생성
+            String insertQuery = "INSERT INTO publisher (publishingCompany) VALUES ('" + line + "');";
+
+            // 생성된 쿼리 출력 또는 데이터베이스에 전송
+            System.out.println(insertQuery);
+        }
+    }
+
+	}
+	
+	
+

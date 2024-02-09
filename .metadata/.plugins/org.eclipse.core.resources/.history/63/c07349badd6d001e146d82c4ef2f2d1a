@@ -1,0 +1,27 @@
+package Day11;
+
+import java.util.Scanner;
+
+public class JEcontnue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n;
+		int s =0;
+		while(true) {
+			System.out.println("숫자입력: ");
+			n=sc.nextInt();
+			if(n==0) {
+				System.out.println("end");
+				break;
+			}else if(n<0) {
+				System.out.println("양수만 입력하세요");
+				continue;
+			}
+			s = s+n; 
+		}
+		System.out.println("총합: "+ s);
+	}
+
+}

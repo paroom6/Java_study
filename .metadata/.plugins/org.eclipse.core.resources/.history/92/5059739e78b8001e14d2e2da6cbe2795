@@ -1,0 +1,35 @@
+package author;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class wqe {
+
+    public static List<String> splitAuthors(String authors) {
+        // 작가명을 ';'로 구분하여 리스트로 반환
+        return Arrays.asList(authors.split(";"));
+    }
+
+    public static void main(String[] args) {
+        // 예시: 여러 줄에 대한 작가명
+        String authorsText = "원작: 흔한남매 ; 글: 이재국,이현진 ; 그림: 김덕영 ;\n"
+                + "토이트론 편집부 지음 ;\n"
+                + "유대영 글 ; 홍거북 그림 ;\n"
+                + "토이트론 편집부 지음 ;";
+
+        // 줄 단위로 분리
+        String[] lines = authorsText.split("\n");
+
+        // 각 줄에 대해 작가명 분리 및 출력
+        for (String line : lines) {
+            List<String> authorsList = splitAuthors(line);
+
+            // 분리된 작가명 출력
+            for (String author : authorsList) {
+                System.out.println(author.trim()); // 공백 제거
+            }
+
+            System.out.println(); // 각 줄 사이에 빈 줄 추가
+        }
+    }
+}
